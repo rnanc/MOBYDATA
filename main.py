@@ -2,14 +2,14 @@ import cv2
 import numpy as np
 from time import sleep
 
-largura_min=80 #Largura minima do retangulo
-altura_min=80 #Altura minima do retangulo
+largura_min=95 #Largura minima do retangulo
+altura_min=120 #Altura minima do retangulo
 
-offset=2 #Erro permitido entre pixel  
+offset=1 #Erro permitido entre pixel
 
-pos_linha=550 #Posição da linha de contagem 
+pos_linha=550 #Posição da linha de contagem
 
-delay= 60 #FPS do vídeo
+delay= 800 #FPS do vídeo
 
 detec = []
 pessoas= 0
@@ -22,8 +22,8 @@ def pega_centro(x, y, w, h):
     cy = y + y1
     return cx,cy
 
-cap = cv2.VideoCapture('supermarket.mp4')
-subtracao = cv2.bgsegm.createBackgroundSubtractorMOG()
+cap = cv2.VideoCapture("supermarket.mp4")
+subtracao = cv2.createBackgroundSubtractorMOG2(detectShadows=True)
 while True:
     ret , frame1 = cap.read()
     tempo = float(1/delay)
@@ -31,9 +31,12 @@ while True:
     grey = cv2.cvtColor(frame1,cv2.COLOR_BGR2GRAY)
     blur = cv2.GaussianBlur(grey,(3,3),5)
     img_sub = subtracao.apply(blur)
-    dilat = cv2.dilate(img_sub,np.ones((5,5)))
-    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5))
+    dilat = cv2.dilate(img_sub,np.ones((1,2)))
+    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 25))
     dilatada = cv2.morphologyEx (dilat, cv2. MORPH_CLOSE , kernel)
+    dilatada = cv2.morphologyEx (dilatada, cv2. MORPH_CLOSE , kernel)
+    dilatada = cv2.morphologyEx (dilatada, cv2. MORPH_CLOSE , kernel)
+    dilatada = cv2.morphologyEx (dilatada, cv2. MORPH_CLOSE , kernel)
     dilatada = cv2.morphologyEx (dilatada, cv2. MORPH_CLOSE , kernel)
     dilatada = cv2.morphologyEx (dilatada, cv2. MORPH_CLOSE , kernel)
     dilatada = cv2.morphologyEx (dilatada, cv2. MORPH_CLOSE , kernel)
