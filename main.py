@@ -2,12 +2,12 @@ import cv2
 import numpy as np
 from time import sleep
 
-largura_min=95 #Largura minima do retangulo
-altura_min=120 #Altura minima do retangulo
+largura_min=45 #Largura minima do retangulo
+altura_min=120#Altura minima do retangulo
 
 offset=1 #Erro permitido entre pixel
 
-pos_linha=550 #Posição da linha de contagem
+pos_linha=525 #Posição da linha de contagem
 
 delay= 800 #FPS do vídeo
 
@@ -31,8 +31,8 @@ while True:
     grey = cv2.cvtColor(frame1,cv2.COLOR_BGR2GRAY)
     blur = cv2.GaussianBlur(grey,(3,3),5)
     img_sub = subtracao.apply(blur)
-    dilat = cv2.dilate(img_sub,np.ones((1,2)))
-    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 25))
+    dilat = cv2.dilate(img_sub,np.ones((25, 10)))
+    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (1, 30))
     dilatada = cv2.morphologyEx (dilat, cv2. MORPH_CLOSE , kernel)
     dilatada = cv2.morphologyEx (dilatada, cv2. MORPH_CLOSE , kernel)
     dilatada = cv2.morphologyEx (dilatada, cv2. MORPH_CLOSE , kernel)
@@ -43,7 +43,7 @@ while True:
     dilatada = cv2.morphologyEx (dilatada, cv2. MORPH_CLOSE , kernel)
     
     contorno,h = cv2.findContours(dilatada,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
-    cv2.line(frame1, (25, pos_linha), (1200, pos_linha), (255,127,0), 3) 
+    cv2.line(frame1, (25, pos_linha), (1200, pos_linha), (255,127,0), 3)
     for(i,c) in enumerate(contorno):
         (x,y,w,h) = cv2.boundingRect(c)
         validar_contorno = (w >= largura_min) and (h >= altura_min)
