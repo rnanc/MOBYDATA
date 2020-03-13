@@ -7,7 +7,7 @@ import datetime
 start = 1
 duration = 10
 fps = '30'
-cap = cv2.VideoCapture('teste2.mp4')
+cap = cv2.VideoCapture('videos/teste2.mp4')
 outfile = 'heatmap.mp4'
 
 
