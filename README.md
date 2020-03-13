@@ -4,8 +4,6 @@
 MOBYDATA é um software para gerar dados a partir do mapeamento do comportamento do público no ambiente em que se encontra através de análises de mapas de calor e reconhecimento de pessoas.
 
 ## Sumário
-- [MOBYDATA](#mobydata)
-  - [Sumário](#sum%c3%a1rio)
   - [Mapa de Calor](#mapa-de-calor)
   - [Rastro de Calor](#rastro-de-calor)
   - [Contador de Pessoas](#contador-de-pessoas)
