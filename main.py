@@ -7,11 +7,7 @@ altura_min=120#Altura minima do retangulo
 
 offset=1 #Erro permitido entre pixel
 
-<<<<<<< HEAD
-pos_linha=230 #Posição da linha de contagem 
-=======
 pos_linha=525 #Posição da linha de contagem
->>>>>>> master
 
 delay= 800 #FPS do vídeo
 
