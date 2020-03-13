@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f44d4365-823c-4868-8ca8-e46637b8fc0a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ElielsonTracker/TrackEli.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Movimento Tracking.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Movimento Tracking.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -173,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583537226857</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="novos meios de detecção">
+      <created>1583981882098</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583981882098</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
