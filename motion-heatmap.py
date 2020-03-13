@@ -6,7 +6,7 @@ from time import sleep
 
 
 def main():
-    capture = cv2.VideoCapture('teste2.mp4')
+    capture = cv2.VideoCapture('supermarket.mp4')
     background_subtractor = cv2.bgsegm.createBackgroundSubtractorMOG()
     length = int(capture.get(cv2.CAP_PROP_FRAME_COUNT))
 
