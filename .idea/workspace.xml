@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f1fad96d-ce77-4391-956c-d616f2901b35" name="Default Changelist" comment="" />
+    <list default="true" id="f44d4365-823c-4868-8ca8-e46637b8fc0a" name="Default Changelist" comment="fix: exclusão de códigos e pastas desnecessárias&#10;perf: melhorada a detecção do contador">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Vehicle-Counter-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Vehicle-Counter-master.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1YcSpLt1Mdgiz8Sti1WI0UG9wwQ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -16,6 +34,19 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../YOLO_Object_Detection" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -42,27 +73,17 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f1fad96d-ce77-4391-956c-d616f2901b35" name="Default Changelist" comment="" />
+      <changelist id="f44d4365-823c-4868-8ca8-e46637b8fc0a" name="Default Changelist" comment="fix: exclusão de códigos e pastas desnecessárias&#10;perf: melhorada a detecção do contador" />
       <created>1583240570335</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -70,30 +91,31 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="254" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583259151346">
-      <screen x="62" y="0" width="1474" height="864" />
-    </state>
-    <state x="254" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1474.864@62.0.1474.864" timestamp="1583259151346" />
-    <state x="580" y="187" key="FileChooserDialogImpl" timestamp="1583267068432">
-      <screen x="62" y="0" width="1474" height="864" />
-    </state>
-    <state x="580" y="187" key="FileChooserDialogImpl/62.0.1474.864@62.0.1474.864" timestamp="1583267068432" />
-    <state width="1453" height="224" key="GridCell.Tab.0.bottom" timestamp="1583266807468">
-      <screen x="62" y="0" width="1474" height="864" />
-    </state>
-    <state width="1453" height="224" key="GridCell.Tab.0.bottom/62.0.1474.864@62.0.1474.864" timestamp="1583266807468" />
-    <state width="1453" height="224" key="GridCell.Tab.0.center" timestamp="1583266807468">
-      <screen x="62" y="0" width="1474" height="864" />
-    </state>
-    <state width="1453" height="224" key="GridCell.Tab.0.center/62.0.1474.864@62.0.1474.864" timestamp="1583266807468" />
-    <state width="1453" height="224" key="GridCell.Tab.0.left" timestamp="1583266807468">
-      <screen x="62" y="0" width="1474" height="864" />
-    </state>
-    <state width="1453" height="224" key="GridCell.Tab.0.left/62.0.1474.864@62.0.1474.864" timestamp="1583266807468" />
-    <state width="1453" height="224" key="GridCell.Tab.0.right" timestamp="1583266807468">
-      <screen x="62" y="0" width="1474" height="864" />
-    </state>
-    <state width="1453" height="224" key="GridCell.Tab.0.right/62.0.1474.864@62.0.1474.864" timestamp="1583266807468" />
+    <state x="254" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
+    <state x="254" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1474.864@62.0.1474.864" />
+    <state x="580" y="187" key="FileChooserDialogImpl" />
+    <state x="580" y="187" key="FileChooserDialogImpl/62.0.1474.864@62.0.1474.864" />
+    <state width="1453" height="224" key="GridCell.Tab.0.bottom" />
+    <state width="1453" height="224" key="GridCell.Tab.0.bottom/62.0.1474.864@62.0.1474.864" />
+    <state width="1453" height="224" key="GridCell.Tab.0.center" />
+    <state width="1453" height="224" key="GridCell.Tab.0.center/62.0.1474.864@62.0.1474.864" />
+    <state width="1453" height="224" key="GridCell.Tab.0.left" />
+    <state width="1453" height="224" key="GridCell.Tab.0.left/62.0.1474.864@62.0.1474.864" />
+    <state width="1453" height="224" key="GridCell.Tab.0.right" />
+    <state width="1453" height="224" key="GridCell.Tab.0.right/62.0.1474.864@62.0.1474.864" />
   </component>
 </project>
