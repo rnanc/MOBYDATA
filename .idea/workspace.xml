@@ -1,40 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f44d4365-823c-4868-8ca8-e46637b8fc0a" name="Default Changelist" comment="fix: exclusão de códigos e pastas desnecessárias&#10;perf: melhorada a detecção do contador">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Vehicle-Counter-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Vehicle-Counter-master.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f44d4365-823c-4868-8ca8-e46637b8fc0a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Vehicle-Counter-master.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/rSettings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CESUPA.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supermarket.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video.mp4" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1YcSpLt1Mdgiz8Sti1WI0UG9wwQ" />
+  <component name="ProjectId" id="1ZGQsRlTBEpa3NuAByDBAwVOWcn" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../YOLO_Object_Detection" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Elielson\Documents\PyCharm - Projetos atuais\Movimento Tracking" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -50,7 +47,7 @@
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Vehicle-Counter-master" />
+      <module name="Movimento Tracking" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -73,8 +70,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -82,40 +77,6 @@
     <configuration />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="f44d4365-823c-4868-8ca8-e46637b8fc0a" name="Default Changelist" comment="fix: exclusão de códigos e pastas desnecessárias&#10;perf: melhorada a detecção do contador" />
-      <created>1583240570335</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1583240570335</updated>
-    </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="254" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
-    <state x="254" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1474.864@62.0.1474.864" />
-    <state x="580" y="187" key="FileChooserDialogImpl" />
-    <state x="580" y="187" key="FileChooserDialogImpl/62.0.1474.864@62.0.1474.864" />
-    <state width="1453" height="224" key="GridCell.Tab.0.bottom" />
-    <state width="1453" height="224" key="GridCell.Tab.0.bottom/62.0.1474.864@62.0.1474.864" />
-    <state width="1453" height="224" key="GridCell.Tab.0.center" />
-    <state width="1453" height="224" key="GridCell.Tab.0.center/62.0.1474.864@62.0.1474.864" />
-    <state width="1453" height="224" key="GridCell.Tab.0.left" />
-    <state width="1453" height="224" key="GridCell.Tab.0.left/62.0.1474.864@62.0.1474.864" />
-    <state width="1453" height="224" key="GridCell.Tab.0.right" />
-    <state width="1453" height="224" key="GridCell.Tab.0.right/62.0.1474.864@62.0.1474.864" />
   </component>
 </project>

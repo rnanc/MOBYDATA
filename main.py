@@ -23,13 +23,13 @@ def pega_centro(x, y, w, h):
     return cx, cy
 
 
-cap = cv2.VideoCapture('CESUPA.mp4')
+cap = cv2.VideoCapture('videos/CESUPA.mp4')
 i, frame = cap.read()
 fshape = frame.shape
 fheight = fshape[0]
 fwidth = fshape[1]
 #fourcc = cv2.VideoWriter_fourcc(*'MJPG')
-video_editado = cv2.VideoWriter("output.mp4", -1, 20.0, (fwidth,fheight))
+video_editado = cv2.VideoWriter("videos/output.mp4", -1, 20.0, (fwidth,fheight))
 
 subtracao = cv2.bgsegm.createBackgroundSubtractorMOG()
 
