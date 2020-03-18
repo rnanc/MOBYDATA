@@ -31,7 +31,7 @@ Neste relatório está sendo utilizado Python e a biblioteca OpenCV para captura
 
 ## Equipe
 
-* Renan Carneiro
-* Elielson Barbosa
-* Larissa Negrão
-* Luan Rodrigues
+* Renan Carneiro  - renanfigcarneiro@gmail.com
+* Elielson Barbosa - elielsonbr.com@gmail.com
+* Larissa Negrão - larissa.negrao.25@gmail.com
+* Luan Rodrigues - luanrodrigues06@outlook.com
