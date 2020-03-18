@@ -4,6 +4,7 @@
 MOBYDATA é um software para gerar dados a partir do mapeamento do comportamento do público no ambiente em que se encontra através de análises de mapas de calor e reconhecimento de pessoas.
 
 ## Sumário
+
   - [Mapa de Calor](#mapa-de-calor)
   - [Rastro de Calor](#rastro-de-calor)
   - [Contador de Pessoas](#contador-de-pessoas)
@@ -23,9 +24,10 @@ Neste relatório está sendo utilizado Python e a biblioteca OpenCV para captura
 ![heattrace](heat-trace.gif)
 
 ## Contador de Pessoas 
-![git-icon](https://img.icons8.com/dusk/64/000000/counter.png)
 
 Neste relatório está sendo utilizado Python e a biblioteca OpenCV para capturar os movimentos existentes no vídeo e assim através de lógica contar o fluxo de pessoas de uma determinada área.
+
+![counter](counter.gif)
 
 ## Equipe
 
