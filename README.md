@@ -15,19 +15,19 @@ MOBYDATA é um software para gerar dados a partir do mapeamento do comportamento
 Neste relatório está sendo utilizado Python e a biblioteca OpenCV para capturar os movimentos existentes no vídeo e assim mapear os pixels que foram 
 mais ativados.
 
-![heatmap](heat-map.gif)
+![heatmap](files/gif/heat-map.gif)
 
 ## Rastro de Calor 
 
 Neste relatório está sendo utilizado Python e a biblioteca OpenCV para capturar os movimentos existentes no vídeo e assim mapear os pixels que foram ativados previamente, assim deixando um rastro do movimento feito.
 
-![heattrace](heat-trace.gif)
+![heattrace](files/gif/heat-trace.gif)
 
 ## Contador de Pessoas 
 
 Neste relatório está sendo utilizado Python e a biblioteca OpenCV para capturar os movimentos existentes no vídeo e assim através de lógica contar o fluxo de pessoas de uma determinada área.
 
-![counter](counter.gif)
+![counter](files/gif/counter.gif)
 
 ## Equipe
 
