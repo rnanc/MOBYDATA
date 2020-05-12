@@ -1,20 +1,26 @@
 from flask import request, Blueprint, current_app
-from config.database.model import Report
-from config.database.serealizer import ReportSchema
+from config.database.model import Report, Users
+from config.database.serealizer import ReportSchema, UserSchema
+import json
 from flask_jwt_extended import jwt_required
 report_blueprint = Blueprint('report', __name__, template_folder='templates')
 
 @report_blueprint.route('/create_report', methods=["POST"])
-@jwt_required
+#@jwt_required
 def create_report():
     bs = ReportSchema()
-    report = bs.load(request.json)
+    current_app.db.session.commit()
+    report = request.json
+    user_query = Users.query.filter(Users.username == report["owner"]).first()
+    report.pop("owner", None)
+    report = bs.load(report)
     current_app.db.session.add(report)
+    user_query.reports.append(report)
     current_app.db.session.commit()
     return bs.jsonify(report), 201
 
 @report_blueprint.route('/read_report', methods=["GET"])
-@jwt_required
+#@jwt_required
 def read_report():
     bs = ReportSchema(many=True)
     result = Report.query.all()

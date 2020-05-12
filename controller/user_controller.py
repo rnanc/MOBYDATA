@@ -1,12 +1,12 @@
 from flask import request, Blueprint, current_app, redirect, url_for, make_response
-from config.database.serealizer import UserSchema
-from config.database.model import Users
+from config.database.serealizer import UserSchema, ReportSchema
+from config.database.model import Users, Report
 from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required, set_access_cookies
 
 user_blueprint = Blueprint('user', __name__, template_folder='templates')
 
 @user_blueprint.route('/create_user', methods=["GET","POST"])
-@jwt_required
+#@jwt_required
 def register_user():
     if request.method == "POST":
         us = UserSchema()
@@ -28,7 +28,7 @@ def register_user():
             '''
 
 @user_blueprint.route('/read_user', methods=["GET"])
-@jwt_required
+#@jwt_required
 def read_user():
     us = UserSchema(many=True)
     result = Users.query.all()
@@ -71,10 +71,10 @@ def delete_user(identifier):
     return us.jsonify(result), 200
 
 @user_blueprint.route('/findone_user/<identifier>', methods=["GET"])
-@jwt_required
+#@jwt_required
 def findone_user(identifier):
     us = UserSchema(many=True)
-    user = Users.query.filter(Users.id == identifier)
+    user = Users.query.filter(Users.username == identifier)
     return us.jsonify(user), 200
 
 @user_blueprint.route('/login_user', methods=["POST"])
