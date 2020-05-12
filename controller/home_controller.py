@@ -5,6 +5,7 @@ home_blueprint = Blueprint('home', __name__, template_folder='templates')
 @home_blueprint.route('/', methods=["GET", "POST"])
 def home():
     if request.method == 'GET':
+
         if not request.cookies.get('logado'):
             return '''
                     <h2>Bem vindos a Mobility Data!</h2>
