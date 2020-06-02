@@ -1,0 +1,107 @@
+.container {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  place-content: center;
+  justify-content: center;
+  margin: 0 100px 0 150px;
+}
+
+.contato-form {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 100px 180px 0 100px;
+}
+
+.contato-form h3 {
+  font-size: 50px;
+  font-family: Candara, sans-serif;
+  color: #27133b;
+  margin-bottom: 30px;
+}
+
+.contato-form span {
+  font-family: Candara, sans-serif;
+  color: #27133b;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 15px 0 15px 0;
+}
+
+.input-box {
+  background: #fff;
+  border-radius: 15px;
+  max-width: 55%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contato-form input {
+  border: 0;
+  font-size: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background: transparent;
+  width: 100%;
+}
+
+.contato-form button {
+  margin-top: 50px;
+  width: 25%;
+  height: 30px;
+  align-self: center;
+  border-radius: 15px;
+  border: 0;
+  background: #3d0dc4 ;
+
+  cursor: pointer;
+  color: #fff;
+  font-family: Candara, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background .6s;
+}
+
+.contato-form button:hover {
+  background: #1e085c ;
+}
+
+.card-team {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  padding: 16px 16px 16px 16px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  height: 200px;
+  max-width: 400px;
+
+  color: #27133b;
+  font-family: Candara, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+
+  justify-content: space-between;
+  align-items: center;
+
+  transform: translateY(200%);
+
+}
+
+.card-team h4 {
+  font-size: 25px;
+  font-family: Candara, sans-serif;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.card-team p {
+  font-family: Candara, sans-serif;
+  margin-bottom: 5px;
+}
