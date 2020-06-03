@@ -7,11 +7,33 @@
   margin: 0 100px 0 150px;
 }
 
+@keyframes contato-form-animation {
+  from {
+    transform: translateX(-250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes contato-team-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .contato-form {
   display: flex;
   flex: 1;
   flex-direction: column;
   padding: 100px 180px 0 100px;
+  animation-name: contato-form-animation;
+  animation-duration: 2.5s;
 }
 
 .contato-form h3 {
@@ -92,10 +114,28 @@
 
   transform: translateY(200%);
 
+  animation-name: contato-team-animation;
+  animation-duration: 2.5s;
+
+}
+
+.card-team-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #27133b;
+  background: #EAFF1A;
+  box-shadow: 0px 3px 6px #0090FF52;
+  border-radius: 11px;
+
+  width: 200px;
+
+  margin-top: -50px;
 }
 
 .card-team h4 {
-  font-size: 25px;
+  font-size: 40px;
   font-family: Candara, sans-serif;
   margin-bottom: 15px;
   font-weight: bold;
