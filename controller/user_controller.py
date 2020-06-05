@@ -35,7 +35,7 @@ def read_user():
     return us.jsonify(result), 200
 
 @user_blueprint.route('/update_user/<identifier>', methods=["POST", "GET"])
-@jwt_required
+#@jwt_required
 def update_user(identifier):
     if request.method == "POST":
         us = UserSchema()
@@ -80,7 +80,7 @@ def findone_user(identifier):
 @user_blueprint.route('/login_user', methods=["POST"])
 def login_user():
     user = request.form.to_dict()
-    user_query = Users.query.filter_by(username=user["username"]).first()
+    user_query = Users.query.filter_by(email=user["email"]).first()
     if user_query and user_query.verify_password(user['password']):
         acess_token = create_access_token(identity=user_query.id)
         refresh_token = create_refresh_token(identity=user_query.id)
@@ -88,4 +88,4 @@ def login_user():
         response.set_cookie('logado', 'yes')
         response.set_cookie('access_token_cookie', acess_token)
         return response
-    return "Usuário ou senha inválidos!", 401
+    return redirect(url_for("home.home"))
