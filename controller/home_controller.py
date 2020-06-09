@@ -13,7 +13,5 @@ def home():
 def quem_somos():
     return render_template("quemSomos.html")
 
-@home_blueprint.route('/fale_conosco', methods=["GET"])
-def fale_conosco():
-    return render_template("faleConosco.html")
+
 
