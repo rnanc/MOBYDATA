@@ -16,22 +16,25 @@
   </nav>
 
   <div class="container">
-    <div class="contato-form">
-      <h3>Entre em contato</h3>
-      <span>Nome</span>
-      <div class="input-box">
-        <input type="text">
+    <form action="fale_conosco" enctype="multipart/form-data" method="post">
+      <div class="contato-form">
+        <h3>Entre em contato</h3>
+        <span>Nome</span>
+        <div class="input-box">
+          <input type="text" name="subject">
+        </div>
+        <span>E-mail</span>
+        <div class="input-box">
+          <input type="text" name="email">
+        </div>
+        <span>Mensagem</span>
+        <div class="input-box">
+          <input type="text" name="body">
+        </div>
+        <button>Enviar</button>
       </div>
-      <span>E-mail</span>
-      <div class="input-box">
-        <input type="text">
-      </div>
-      <span>Mensagem</span>
-      <div class="input-box">
-        <input type="text">
-      </div>
-      <button>Enviar</button>
-    </div>
+    </form>
+
 
     <div class="card-team">
       <div class="card-team-header">
