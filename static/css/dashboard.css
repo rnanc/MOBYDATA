@@ -15,18 +15,29 @@ body {
   color: #363C4C;;
 }
 
+@keyframes container-select-animation {
+  from {
+    transform: translateX(-250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .container-content h3 {
   margin-top: 50px;
   font-family: Candara, sans-serif;
   font-size: 40px;
   color: #363C4C;
 }
-.container-select {
-  display: flex;
-  flex: 1;
+.content-select {
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
+  animation-name: container-select-animation;
+  animation-duration: 2s;
 }
 .container-content select{
   margin-top: 50px;
@@ -48,11 +59,24 @@ body {
   text-align-last: center
 }
 
+@keyframes container-date-animation {
+  from {
+    transform: translateX(250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .content-date {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  animation-name: container-date-animation;
+  animation-duration: 2s;
 }
 
 .content-date i{
@@ -139,20 +163,19 @@ body {
 }
 
 #setor{
-  visibility: hidden;
   opacity: 0;
+  visibility: hidden;
   transition: opacity .8s;
 }
 
 #setor.ativarMenu{
-  visibility: visible;
   opacity: .5;
+  visibility: visible;
 }
 
 #camera.ativarMenu{
-  visibility: visible;
   opacity: .5;
-
+  visibility: visible;
 }
 
 .user-name {
