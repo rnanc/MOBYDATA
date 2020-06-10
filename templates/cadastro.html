@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOBYDATA - Cadastro</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/global.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/cadastro.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div id="nav-icon" class="material-icons-round" onclick="collapseNav()">menu</div>
+
+      
+      <div class="user-name"><div class="user-circle"><i style="font-size: 35px;" class="material-icons-round">person</i></div><span>Empresa</span></div>
+
+    <div id="logout-icon" class="material-icons-round" onclick="logoutSession()">keyboard_tab</div>
+  </nav>
+
+  <div id="sideBar">
+    <ul>
+      <li>Cadastrar</li>
+      <li onclick="collapseConfig()"><i class="material-icons-round">settings</i>Configurações</li>
+      <li id="camera">Câmeras</li>
+      <!-- <li id="setor">Nomear Setor</li> -->
+    </ul>
+  </div>
+
+  <div class="container-title">
+    <h2>Cadastrar</h2>
+  </div>
+
+  <div class="container-form">
+    <form class="form-content" action="">
+      <input placeholder="Nome da Empresa" autofocus type="text">
+      <input placeholder="Email" type="email">
+      <input placeholder="Senha" type="password">
+      <div class="checkbox-form">
+        <input type="checkbox">
+        <label class="checkbox">É Administrador ?</label>
+      </div>
+      <button>Cadastrar</button>
+    </form>
+  </div>
+  
+</body>
+<script src="../static/js/navbar.js"></script>
+<script src="../static/js/sidebar.js"></script>
+</html>
