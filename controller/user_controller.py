@@ -84,8 +84,7 @@ def login_user():
     if user_query and user_query.verify_password(user['password']):
         acess_token = create_access_token(identity=user_query.id)
         refresh_token = create_refresh_token(identity=user_query.id)
-        response = make_response(redirect(url_for("home.home")))
-        response.set_cookie('logado', 'yes')
+        response = make_response(redirect(url_for("home.logado")))
         response.set_cookie('access_token_cookie', acess_token)
         return response
     return redirect(url_for("home.home"))
