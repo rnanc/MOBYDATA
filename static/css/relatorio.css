@@ -26,3 +26,27 @@ body {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
 }
+
+button {
+  position: absolute;
+  right:80px;
+  bottom: 30px;
+  width: 180px;
+  height: 60px;
+
+  cursor: pointer;
+
+  border-radius: 15px;
+  border:0;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  background: rgb(208, 255, 0);
+
+  font-size: 30px;
+  font-family: Candara, sans-serif;
+
+  transition: background .5s;
+}
+
+button:hover {
+  background: rgb(179, 219, 0);
+}
