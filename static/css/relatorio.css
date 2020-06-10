@@ -1,0 +1,28 @@
+body {
+  background: #EEEFF3;
+}
+.container-title {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-title h2 {
+  margin-top: 50px;
+  font-family: Candara, sans-serif;
+  font-size: 70px;
+  color: #363C4C;;
+}
+
+.container-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container-img img{
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
