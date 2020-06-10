@@ -130,6 +130,12 @@ input {
   margin-bottom: 30px;
   height: 30px;
   font-size: 16px;
+  transition: box-shadow .6s;
+}
+
+.card-login-content input:focus {
+  border-bottom: 2px solid rgba(109, 1, 252, 0.5);
+  box-shadow: 0 4px 2px -2px rgba(109, 1, 252, 0.2);
 }
 
 .card-login-content button {
@@ -142,9 +148,9 @@ input {
   font-family: Candara, sans-serif;
   font-weight: bold;
 
-  transition: color .6s;
+  transition: color .4s;
 }
 
 .card-login-content button:hover {
-  color: #7c09f0;
+  color: rgba(109, 1, 252, 1);
 }
