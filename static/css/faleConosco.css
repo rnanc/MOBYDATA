@@ -51,7 +51,7 @@
   margin: 15px 0 15px 0;
 }
 
-.input-box {
+.contato-form input {
   background: #fff;
   border-radius: 15px;
   max-width: 55%;
@@ -60,15 +60,17 @@
   justify-content: center;
   align-items: center;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.contato-form input {
   border: 0;
   font-size: 20px;
   padding-left: 8px;
   padding-right: 8px;
-  background: transparent;
   width: 100%;
+
+  transition: box-shadow .4s;
+}
+
+.contato-form input:focus {
+  box-shadow: 2px 2px 10px rgba(109, 1, 252, 0.6);
 }
 
 .contato-form button {
@@ -78,7 +80,7 @@
   align-self: center;
   border-radius: 15px;
   border: 0;
-  background: #3d0dc4 ;
+  background: #3d00e4 ;
 
   cursor: pointer;
   color: #fff;
@@ -89,7 +91,7 @@
 }
 
 .contato-form button:hover {
-  background: #1e085c ;
+  background: #1e0072 ;
 }
 
 .card-team {
