@@ -202,7 +202,6 @@ body {
   font-size: 30px;
 }
 .user-circle {
-  cursor: none;
   position: absolute;
   display: flex;
   align-items: center;
