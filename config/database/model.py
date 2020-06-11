@@ -11,6 +11,8 @@ class Users(db.Model):
     username = db.Column(db.String(200), nullable=False)
     password = db.Column(db.String(200), nullable=False)
     email = db.Column(db.String(200), nullable=True)
+    company_name = db.Column(db.String(200), nullable=False)
+    cam_ref = db.Column(db.String(200), nullable=True)
     provider = db.Column(db.String(200), nullable=False)
     reports = db.relationship("Report", backref='owner', lazy="select")
     def gen_hash(self):

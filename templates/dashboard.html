@@ -15,14 +15,14 @@
     <div id="nav-icon" class="material-icons-round" onclick="collapseNav()">menu</div>
 
       
-      <div class="user-name"><div class="user-circle"><i style="font-size: 35px;" class="material-icons-round">person</i></div><span>Empresa</span></div>
+      <div class="user-name"><div class="user-circle"><i style="font-size: 35px;" class="material-icons-round">person</i></div><span>{{username}}</span></div>
 
     <div id="logout-icon" class="material-icons-round" onclick="logoutSession()">keyboard_tab</div>
   </nav>
 
   <div id="sideBar">
     <ul>
-      <li>Cadastrar</li>
+      <li><a href="/create_user">Cadastrar</a></li>
       <li onclick="collapseConfig()"><i class="material-icons-round">settings</i>Configurações</li>
       <li id="camera">Câmeras</li>
       <li id="setor">Nomear Setor</li>

@@ -16,14 +16,14 @@
     <div id="nav-icon" class="material-icons-round" onclick="collapseNav()">menu</div>
 
       
-      <div class="user-name"><div class="user-circle"><i style="font-size: 35px;" class="material-icons-round">person</i></div><span>Empresa</span></div>
+      <div class="user-name"><div class="user-circle"><i style="font-size: 35px;" class="material-icons-round">person</i></div><span>{{username}}</span></div>
 
     <div id="logout-icon" class="material-icons-round" onclick="logoutSession()">keyboard_tab</div>
   </nav>
 
   <div id="sideBar">
     <ul>
-      <li>Cadastrar</li>
+      <li><a href="/create_user">Cadastrar</a></li>
       <li onclick="collapseConfig()"><i class="material-icons-round">settings</i>Configurações</li>
       <li id="camera">Câmeras</li>
       <li id="setor">Nomear Setor</li>
@@ -35,12 +35,13 @@
   </div>
 
   <div class="container-form">
-    <form class="form-content" action="">
-      <input placeholder="Nome da Empresa" autofocus type="text">
-      <input placeholder="Email" type="email">
-      <input placeholder="Senha" type="password">
+    <form class="form-content" action="create_user" method="post" enctype="multipart/form-data">
+      <input placeholder="Nome de usuário" name="username" autofocus type="text">
+      <input placeholder="Nome da Empresa" name="company_name" autofocus type="text">
+      <input placeholder="Email" name="email" type="email">
+      <input placeholder="Senha" name="password" type="password">
       <div class="checkbox-form">
-        <input type="checkbox">
+        <input type="checkbox" name="provider">
         <label class="checkbox">É Administrador ?</label>
       </div>
       <button>Cadastrar</button>

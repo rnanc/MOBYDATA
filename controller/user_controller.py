@@ -1,4 +1,4 @@
-from flask import request, Blueprint, current_app, redirect, url_for, make_response
+from flask import request, Blueprint, current_app, redirect, url_for, make_response, render_template
 from config.database.serealizer import UserSchema, ReportSchema
 from config.database.model import Users, Report
 from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required, set_access_cookies
@@ -6,26 +6,20 @@ from flask_jwt_extended import create_access_token, create_refresh_token, jwt_re
 user_blueprint = Blueprint('user', __name__, template_folder='templates')
 
 @user_blueprint.route('/create_user', methods=["GET","POST"])
-#@jwt_required
+@jwt_required
 def register_user():
     if request.method == "POST":
         us = UserSchema()
-        user = us.load(request.form.to_dict())
+        user_request = request.form.to_dict()
+        user_request["provider"] = "admin" if "provider" in user_request.keys() else "null"
+        user = us.load(user_request)
         user.gen_hash()
         current_app.db.session.add(user)
         current_app.db.session.commit()
-        return us.jsonify(user), 201
+        return redirect(url_for("home.logado"))
     else:
-        return '''
-                    <h2>Cadastro de usuário</h2>
-                    <form  action="/create_user" method="post">
-                        <input name="username" placeholder='Username'/>
-                        <input name="email" placeholder='E-mail'/>
-                        <input name="password" placeholder='Password'/> 
-                        <input name="provider" value="" placeholder='Provider'/> 
-                        <input type='submit' value='Cadastrar'/>
-                    </form>      
-            '''
+        username = request.cookies.get('username')
+        return render_template("cadastro.html", username=username)
 
 @user_blueprint.route('/read_user', methods=["GET"])
 #@jwt_required
@@ -86,5 +80,6 @@ def login_user():
         refresh_token = create_refresh_token(identity=user_query.id)
         response = make_response(redirect(url_for("home.logado")))
         response.set_cookie('access_token_cookie', acess_token)
+        response.set_cookie('username', user_query.username)
         return response
     return redirect(url_for("home.home"))
