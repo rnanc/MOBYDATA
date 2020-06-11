@@ -27,7 +27,7 @@ def read_report():
     return bs.jsonify(result), 200
 
 @report_blueprint.route('/update_report/<identifier>', methods=["POST"])
-@jwt_required
+#@jwt_required
 def update_report(identifier):
     bs = ReportSchema(many=True)
     query = Report.query.filter(Report.id == identifier)
