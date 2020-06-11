@@ -34,16 +34,21 @@
   </div>
 
   <div class="container-content">
-    <div class="content-select">
-      <h3>Selecione o tipo e a data do relatório</h3>
-      <select name="" id="">
-        <option disabled selected value="">escolha...</option>
-        <option value="">Diário</option>
-        <option value="">Semanal</option>
-        <option value="">Mensal</option>
-      </select>
-    </div>
-    <div class="content-date"><input class="input-date" type="date"><i style="margin-top:150px; margin-left: 25px; font-size: 80px;" class="material-icons-round">date_range</i></div>
+    <form action="relatorio" enctype="multipart/form-data" method="post">
+      <div class="content-select">
+        <h3>Selecione o tipo e a data do relatório</h3>
+        <select name="TYPE" id="">
+          <option disabled selected value="">escolha...</option>
+          <option value="DAY">Diário</option>
+          <option value="WEEK">Semanal</option>
+          <option value="MONTH">Mensal</option>
+        </select>
+      </div>
+      <div class="content-date"><input class="input-date" type="date" name="date"><i style="margin-top:150px; margin-left: 25px; font-size: 80px;" class="material-icons-round">date_range</i></div>
+      <div>
+        <button>Pesquisar</button>
+      </div>
+    </form>
   </div>
   
 </body>
