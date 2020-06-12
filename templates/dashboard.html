@@ -33,8 +33,8 @@
     <h2>Relatórios</h2>
   </div>
 
-  <div class="container-content">
-    <form action="relatorio" enctype="multipart/form-data" method="post">
+  <form action="relatorio" enctype="multipart/form-data" method="post">
+    <div class="container-content">
       <div class="content-select">
         <h3>Selecione o tipo e a data do relatório</h3>
         <select name="TYPE" id="">
@@ -45,11 +45,9 @@
         </select>
       </div>
       <div class="content-date"><input class="input-date" type="date" name="date"><i style="margin-top:150px; margin-left: 25px; font-size: 80px;" class="material-icons-round">date_range</i></div>
-      <div>
-        <button>Pesquisar</button>
-      </div>
+    </div>
+    <button>Pesquisar</button>
     </form>
-  </div>
   
 </body>
 <script src="../static/js/navbar.js"></script>

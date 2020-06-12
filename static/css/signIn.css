@@ -148,9 +148,10 @@ input {
   font-family: Candara, sans-serif;
   font-weight: bold;
 
-  transition: color .4s;
+  transition: all .4s;
 }
 
 .card-login-content button:hover {
   color: rgba(109, 1, 252, 1);
+  transform: translateY(230%) ;
 }
