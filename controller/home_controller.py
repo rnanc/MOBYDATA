@@ -51,7 +51,13 @@ def relatorio():
     form["date"] = form["date"].replace("-", "/")
     username = request.cookies.get('username')
     report_query = Report.query.filter_by(report_type=form["TYPE"], date = form["date"]).first()
-    return render_template("relatorio.html", username=username, report_image=report_query.image, report_date=report_query.date)
+    if report_query:
+        report_image = report_query.image
+        report_date = report_query.date
+    else:
+        report_image = "None"
+        report_date = form["date"]
+    return render_template("relatorio.html", username=username, report_image=report_image, report_date=report_date)
 
 @home_blueprint.route('/quem_somos', methods=["GET"])
 def quem_somos():
