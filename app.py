@@ -3,6 +3,7 @@ from config.database.environment_variable import POSTGRES_USER, POSTGRES_PW, POS
 from config.database.model import configure as db_config
 from config.database.serealizer import configure as ma_config
 from config.mail.mail import configure as em_config
+from config.database.jwt import configure as jwt_config
 from flask_migrate import Migrate
 from controller.home_controller import home_blueprint
 from controller.report_controller import report_blueprint
@@ -10,7 +11,7 @@ from controller.user_controller import user_blueprint
 from controller.contact_controller import contact_blueprint
 from controller.company_controller import company_blueprint
 from controller.services_controller import services_blueprint
-from flask_jwt_extended import JWTManager
+
 
 app = Flask(__name__)
 
@@ -34,18 +35,14 @@ ma_config(app)
 em_config(app)
 Migrate(app, app.db)
 
-jwt = JWTManager(app)
-@jwt.expired_token_loader
-@jwt.invalid_token_loader
-@jwt.unauthorized_loader
-def my_expired_token_callback(expired_token):
-    return redirect(url_for("home.home"))
-
 app.register_blueprint(home_blueprint)
 app.register_blueprint(report_blueprint)
 app.register_blueprint(user_blueprint)
 app.register_blueprint(contact_blueprint)
 app.register_blueprint(company_blueprint)
 app.register_blueprint(services_blueprint)
+
+jwt_config(app)
+
 if __name__ == "__main__":
     app.run(debug=True, port=8080)
