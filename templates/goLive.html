@@ -36,7 +36,9 @@
 
   <div class="container-img">
     <!-- <img src={{report_image}} alt={{report_date}}> -->
-    <div class="container-camera"><img src="{{ url_for('home.video_feed') }}" /></div>
+    {% if "True" in renderizar %}
+      <div class="container-camera"><img src="{{ url_for('home.heat_map') }}" /></div>
+    {% endif %}
   </div>
   <div class="container-search">
     <input placeholder="Número da câmera" type="text">

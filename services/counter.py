@@ -65,7 +65,6 @@ def Rodar(cam):
                     print("Pessoas detectados até o momento: " + str(pessoas))
                     ret, frame1 = cap.read()
                     break
-
         cv2.putText(frame1, "Pessoas entraram: " + str(pessoas), (20, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 3)
         cv2.imshow("Video Original", frame1)
         #video_editado.write(frame1)
