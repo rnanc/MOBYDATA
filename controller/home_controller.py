@@ -1,5 +1,5 @@
-from flask import request, Blueprint, render_template, url_for, Response
-from flask_jwt_extended import  jwt_required
+from flask import request, Blueprint, render_template, url_for, Response, redirect
+from flask_jwt_extended import jwt_required, get_jwt_identity, jwt_optional
 from config.database.serealizer import UserSchema, ReportSchema
 from config.database.model import Users, Report
 import services.counter
@@ -23,13 +23,20 @@ def motion_heatmap():
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @home_blueprint.route('/', methods=["GET"])
+@jwt_optional
 def home():
-    return render_template("signIn.html")
+    current_user = get_jwt_identity()
+    if current_user:
+        return redirect(url_for("home.logado"))
+    else:
+        return render_template("signIn.html")
 
 @home_blueprint.route('/logado', methods=["GET"])
 @jwt_required
 def logado():
     username = request.cookies.get('username')
+    current_user = get_jwt_identity()
+    print(current_user)
     return render_template("dashboard.html", username=username)
 
 @home_blueprint.route('/golive', methods=["GET", "POST"])
