@@ -37,13 +37,13 @@
   <div class="container-img">
     <!-- <img src={{report_image}} alt={{report_date}}> -->
     {% if "0" in renderizar %}
-      <div class="container-camera"><img src="{{ url_for('home.video_feed') }}" /></div>
+      <div class="container-camera"><img src="{{ url_for('services.video_feed') }}" /></div>
     {% endif %}
     {% if "1" in renderizar %}
-      <div class="container-camera"><img src="{{ url_for('home.heat_map') }}" /></div>
+      <div class="container-camera"><img src="{{ url_for('services.heat_map') }}" /></div>
     {% endif %}
     {% if "2" in renderizar %}
-      <div class="container-camera"><img src="{{ url_for('home.motion_heatmap') }}" /></div>
+      <div class="container-camera"><img src="{{ url_for('services.motion_heatmap') }}" /></div>
     {% endif %}
   </div>
 

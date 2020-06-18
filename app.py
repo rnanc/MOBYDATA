@@ -8,6 +8,8 @@ from controller.home_controller import home_blueprint
 from controller.report_controller import report_blueprint
 from controller.user_controller import user_blueprint
 from controller.contact_controller import contact_blueprint
+from controller.company_controller import company_blueprint
+from controller.services_controller import services_blueprint
 from flask_jwt_extended import JWTManager
 
 app = Flask(__name__)
@@ -43,6 +45,7 @@ app.register_blueprint(home_blueprint)
 app.register_blueprint(report_blueprint)
 app.register_blueprint(user_blueprint)
 app.register_blueprint(contact_blueprint)
-
+app.register_blueprint(company_blueprint)
+app.register_blueprint(services_blueprint)
 if __name__ == "__main__":
     app.run(debug=True, port=8080)
