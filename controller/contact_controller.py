@@ -1,5 +1,6 @@
 from flask import request, Blueprint, render_template, redirect, url_for
 from config.mail.mail import send_message
+
 contact_blueprint = Blueprint('contact', __name__, template_folder='templates', static_url_path="static")
 
 @contact_blueprint.route('/fale_conosco', methods=["GET", "POST"])
