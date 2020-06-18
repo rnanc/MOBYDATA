@@ -32,12 +32,16 @@ def logado():
     username = request.cookies.get('username')
     return render_template("dashboard.html", username=username)
 
-@home_blueprint.route('/golive', methods=["GET"])
+@home_blueprint.route('/golive', methods=["GET", "POST"])
 @jwt_required
 def golive():
-    username = request.cookies.get('username')
-    renderizar = "True"
-    return render_template("goLive.html", username=username, renderizar=renderizar)
+    if request.method == "POST":
+        username = request.cookies.get('username')
+        renderizar = request.form["cam"]
+        return render_template("goLive.html", username=username, renderizar=renderizar)
+    else:
+        username = request.cookies.get('username')
+        return render_template("goLive.html", username=username)
 
 @home_blueprint.route('/relatorio', methods=["POST"])
 @jwt_required

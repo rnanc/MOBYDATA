@@ -36,14 +36,25 @@
 
   <div class="container-img">
     <!-- <img src={{report_image}} alt={{report_date}}> -->
-    {% if "True" in renderizar %}
+    {% if "0" in renderizar %}
+      <div class="container-camera"><img src="{{ url_for('home.video_feed') }}" /></div>
+    {% endif %}
+    {% if "1" in renderizar %}
+      <div class="container-camera"><img src="{{ url_for('home.heat_map') }}" /></div>
+    {% endif %}
+    {% if "2" in renderizar %}
       <div class="container-camera"><img src="{{ url_for('home.motion_heatmap') }}" /></div>
     {% endif %}
   </div>
-  <div class="container-search">
-    <input placeholder="Número da câmera" type="text">
-    <button>Abrir Câmera</button>
-  </div>
+
+    <form action="golive" method="post" enctype="multipart/form-data">
+      <div class="container-search">
+        <input placeholder="Número da câmera" type="text" name="cam">
+        <button>Abrir Câmera</button>
+      </div>
+    </form>
+
+
   <button id="go-back-button">Voltar</button>
   
 </body>

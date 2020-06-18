@@ -9,7 +9,7 @@ def Rodar():
     start = 1
     duration = 10
     fps = '30'
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture("static/video/teste2.mp4")
     outfile = 'heatmap.mp4'
 
     while True:
