@@ -6,16 +6,19 @@ import services.motion_heatmap
 services_blueprint = Blueprint('services', __name__, template_folder='templates', static_url_path="static")
 
 @services_blueprint.route('/video_feed')
+@jwt_required
 def video_feed():
     return Response(services.counter.Rodar("static/video/CESUPA.mp4"),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @services_blueprint.route('/heat_map')
+@jwt_required
 def heat_map():
     return Response(services.heat_map.Rodar(),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @services_blueprint.route('/motion_heatmap')
+@jwt_required
 def motion_heatmap():
     return Response(services.motion_heatmap.Rodar(),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
