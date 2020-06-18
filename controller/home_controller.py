@@ -4,6 +4,7 @@ from config.database.serealizer import UserSchema, ReportSchema
 from config.database.model import Users, Report
 import services.counter
 import services.heat_map
+import services.motion_heatmap
 home_blueprint = Blueprint('home', __name__, template_folder='templates', static_url_path="static")
 
 @home_blueprint.route('/video_feed')
@@ -14,6 +15,11 @@ def video_feed():
 @home_blueprint.route('/heat_map')
 def heat_map():
         return Response(services.heat_map.Rodar(),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
+
+@home_blueprint.route('/motion_heatmap')
+def motion_heatmap():
+        return Response(services.motion_heatmap.Rodar(),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @home_blueprint.route('/', methods=["GET"])

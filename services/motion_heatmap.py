@@ -5,15 +5,15 @@ from time import sleep
 # from progress.bar import Bar
 
 
-def main():
-    capture = cv2.VideoCapture('videos/supermarket.mp4')
+def Rodar():
+    capture = cv2.VideoCapture('static/video/supermarket.mp4')
     background_subtractor = cv2.bgsegm.createBackgroundSubtractorMOG()
-    length = int(capture.get(cv2.CAP_PROP_FRAME_COUNT))
+    #length = int(capture.get(cv2.CAP_PROP_FRAME_COUNT))
 
     # bar = Bar('Processing Frames', max=length)
 
     first_iteration_indicator = 1
-    for i in range(0, length):
+    while True:
         sleep(1/60)
         ret, frame = capture.read()
 
@@ -41,9 +41,11 @@ def main():
             color_image = cv2.applyColorMap(accum_image, cv2.COLORMAP_HOT)
             result_overlay = cv2.addWeighted(frame, 0.7, color_image, 0.7, 0)
 
-            cv2.imshow("Video Original" , result_overlay)
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                break
+            #cv2.imshow("Video Original" , result_overlay)
+            ret, jpeg = cv2.imencode('.jpg', result_overlay)
+            send_frame = jpeg.tobytes()
+            yield (b'--frame\r\n'
+                   b'Content-Type: image/jpeg\r\n\r\n' + send_frame + b'\r\n\r\n')
         # bar.next()
 
     # bar.finish()
@@ -54,9 +56,5 @@ def main():
     # cv2.imwrite('diff-overlay.jpg', result_overlay)
 
     # cleanup
-    capture.release()
-    cv2.destroyAllWindows()
-
-
-if __name__ == '__main__':
-    main()
+    #capture.release()
+    #cv2.destroyAllWindows()
