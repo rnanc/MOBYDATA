@@ -66,9 +66,9 @@ def Rodar(cam):
                     ret, frame1 = cap.read()
                     break
         cv2.putText(frame1, "Pessoas entraram: " + str(pessoas), (20, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 3)
-        cv2.imshow("Video Original", frame1)
+        #cv2.imshow("Video Original", frame1)
         #video_editado.write(frame1)
-        cv2.imshow("Detectar", dilatada)
+        #cv2.imshow("Detectar", dilatada)
         ret, jpeg = cv2.imencode('.jpg', frame1)
         send_frame = jpeg.tobytes()
         yield (b'--frame\r\n'
