@@ -12,7 +12,7 @@ body {
   margin-top: 50px;
   font-family: Candara, sans-serif;
   font-size: 70px;
-  color: #363C4C;;
+  color: #363C4C;
 }
 
 .container-img {
@@ -56,6 +56,8 @@ button:hover {
   background: rgb(179, 219, 0);
 }
 
-h3{
+.error-msg{
  color: rgb(255, 0, 0);
+ font-family: Candara, sans-serif;
+ font-size: 45px;
 }

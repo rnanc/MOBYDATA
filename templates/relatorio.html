@@ -23,9 +23,9 @@
 
   <div id="sideBar">
     <ul>
-      <li><a href="/logado">Home</a></li>
+      <li><a href="/logado">Início</a></li>
       <li><a href="/create_user">Cadastrar</a></li>
-      <li onclick="collapseConfig()"><i class="material-icons-round">settings</i>Configurações</li>
+      <li onclick="collapseConfig()"><i class="material-icons-round">settings</i>Ferramentas</li>
       <li id="camera"><a href="/golive">GoLive</a></li>
     </ul>
   </div>
@@ -39,7 +39,7 @@
       <img src={{report_image}} alt={{report_date}}>
     {% endif %}
     {% if "None" in report_image %}
-      <h3>Sem relatório deste dia</h3>
+      <h3 class="error-msg">Sem relatório deste dia, tente outra data</h3>
     {% endif %}
   </div>
   <form action="logado" method="get" enctype="text/plain">
