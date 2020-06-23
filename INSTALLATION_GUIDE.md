@@ -1,4 +1,7 @@
-Requisitos:
+# CLONE OU DOWNLOAD
+Faça o download do projeto como .zip ou clone em uma pasta de sua preferência.
+
+# REQUISITOS
 
 - PostgreSQL
 - PgAdmin 4
@@ -6,6 +9,7 @@ Requisitos:
 - Virtualenv
 - Python 3.7
 
+# POSTGRE
 download Postgre: https://www.postgresql.org/download/
 
 Como instalar: https://www.postgresqltutorial.com/install-postgresql/
@@ -22,7 +26,11 @@ Abra o arquivo `database_config.txt` e insira as seguintes informações nessa o
 
 - postgres (nome do seu banco de dados, por padrão é criado o postgres)
 
-Após a instalação do postgre, instale o Conda.
+
+
+# CONDA
+
+Após a instalação do postgre, instale o Conda (Anaconda).
 
 guia de instalação do conda: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
 
@@ -35,6 +43,8 @@ Após instalar o conda, no momento da criação da virtualenv dentro do projeto 
 Para iniciar a virtualenv com os pacotes já instalados.
 
 Inicie sua virtualenv de acordo como mostra o tutorial no site do conda. 
+
+# CRIANDO BANCO DE DADOS
 
 Após iniciado, crie o banco de dados local com os seguintes comandos:
 
@@ -49,6 +59,8 @@ Comando 2:
 Comando 3:
 
 > flask db upgrade
+
+# CRIANDO PRIMEIRO USUÁRIO
 
 Com o banco criado, inicie o seu pgAdmin 4, será aberto uma aba no seu navegador padrão e então você poderá visualizar as informações contidas no banco criado por lá.
 
@@ -68,6 +80,8 @@ Aparecerá uma tabela com as informações do seu banco embaixo. Nos campos
 `id` digite 1, em `username` seu nome de usuário, em `password` sua senha, em `email` seu e-mail e em `company_name` o nome de sua empresa.
 
 Após criar um usuário aperte `F6` para salvar as informações e então você já poderá logar no sistema.
+
+# INICIANDO PROJETO
 
 Volte na sua virtualenv e agora digite o comando:
 
