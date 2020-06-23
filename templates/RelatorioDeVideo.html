@@ -38,20 +38,27 @@
   <div class="container-img">
     <!-- <img src={{report_image}} alt={{report_date}}> -->
     {% if "0" in renderizar %}
-      <div class="container-camera"><img src="{{ url_for('services.video_feed') }}" /></div>
+      <div class="container-camera"><img src="{{ url_for('services.video_feed', video=video) }}" /></div>
     {% endif %}
     {% if "1" in renderizar %}
-      <div class="container-camera"><img src="{{ url_for('services.heat_map') }}" /></div>
+      <div class="container-camera"><img src="{{ url_for('services.heat_map', video=video) }}" /></div>
     {% endif %}
     {% if "2" in renderizar %}
-      <div class="container-camera"><img src="{{ url_for('services.motion_heatmap') }}" /></div>
+      <div class="container-camera"><img src="{{ url_for('services.motion_heatmap', video=video) }}" /></div>
     {% endif %}
   </div>
 
-    <form action="golive" method="post" enctype="multipart/form-data">
+    <form action="video_report" method="post" enctype="multipart/form-data">
       <div class="container-search">
-        <input disabled type="text">
-        <button>Buscar Vídeo</button>
+        <div class="content-select">
+          <select name="cam" id="">
+            <option disabled selected value="">escolha...</option>
+            <option value="0">Contador</option>
+            <option value="1">Mapa de Calor</option>
+            <option value="2">Rastro de Calor</option>
+          </select>
+        </div>
+        <input type="file" name="file">
         <button class="button-enviar">Enviar Vídeo</button>
       </div>
     </form>

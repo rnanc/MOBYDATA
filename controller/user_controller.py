@@ -6,7 +6,7 @@ from flask_jwt_extended import create_access_token, create_refresh_token, jwt_re
 user_blueprint = Blueprint('user', __name__, template_folder='templates')
 
 @user_blueprint.route('/create_user', methods=["GET","POST"])
-@jwt_required
+#@jwt_required
 def register_user():
     if request.method == "POST":
         us = UserSchema()
