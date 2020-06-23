@@ -5,7 +5,7 @@ MOBYDATA é um software para gerar dados a partir do mapeamento do comportamento
 
 ## Sumário
 
-  - [Guia de Instalação](#guia-de-instalacao)
+  - [Guia de Instalação](#guia-de-instalação)
   - [Mapa de Calor](#mapa-de-calor)
   - [Rastro de Calor](#rastro-de-calor)
   - [Contador de Pessoas](#contador-de-pessoas)
