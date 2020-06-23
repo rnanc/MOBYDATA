@@ -68,13 +68,13 @@
   transition: opacity .8s;
 }
 
-#setor{
+#relatorioDeVideo{
   opacity: 0;
   visibility: hidden;
   transition: opacity .8s;
 }
 
-#setor.ativarMenu{
+#relatorioDeVideo.ativarMenu{
   opacity: .5;
   visibility: visible;
 }
