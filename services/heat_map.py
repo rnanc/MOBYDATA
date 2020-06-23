@@ -4,12 +4,12 @@ import datetime
 # use it if you wonna write video or ffmpeg 
 # from skvideo.io import FFmpegWriter 
 
-def Rodar():
+def Rodar(cam):
 
     start = 1
     duration = 10
     fps = '30'
-    cap = cv2.VideoCapture("static/video/teste2.mp4")
+    cap = cv2.VideoCapture(cam)
     outfile = 'heatmap.mp4'
 
     while True:

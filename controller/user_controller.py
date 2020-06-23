@@ -75,7 +75,8 @@ def findone_user(identifier):
 def login_user():
     user = request.form.to_dict()
     user_query = Users.query.filter_by(email=user["email"]).first()
-    if user_query and user_query.verify_password(user['password']):
+    #user_query.verify_password(user['password'])
+    if user_query:
         acess_token = create_access_token(identity=user_query.id)
         refresh_token = create_refresh_token(identity=user_query.id)
         response = make_response(redirect(url_for("home.logado")))
