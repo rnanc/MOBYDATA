@@ -5,8 +5,8 @@ from time import sleep
 # from progress.bar import Bar
 
 
-def Rodar():
-    capture = cv2.VideoCapture('static/video/supermarket.mp4')
+def Rodar(cam):
+    capture = cv2.VideoCapture(cam)
     background_subtractor = cv2.bgsegm.createBackgroundSubtractorMOG()
     #length = int(capture.get(cv2.CAP_PROP_FRAME_COUNT))
 

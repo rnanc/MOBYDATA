@@ -14,13 +14,13 @@ def video_feed():
 @services_blueprint.route('/heat_map')
 @jwt_required
 def heat_map():
-    return Response(services.heat_map.Rodar(),
+    return Response(services.heat_map.Rodar("static/video/teste2.mp4"),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @services_blueprint.route('/motion_heatmap')
 @jwt_required
 def motion_heatmap():
-    return Response(services.motion_heatmap.Rodar(),
+    return Response(services.motion_heatmap.Rodar('static/video/supermarket.mp4'),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @services_blueprint.route('/golive', methods=["GET", "POST"])

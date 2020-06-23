@@ -1,12 +1,6 @@
-import os
-def get_env_variable(name):
-    try:
-        return os.environ[name]
-    except KeyError:
-        message = "Expected environment variable '{}' not set.".format(name)
-        raise Exception(message)
-
-POSTGRES_URL = get_env_variable("POSTGRES_URL")
-POSTGRES_USER = get_env_variable("POSTGRES_USER")
-POSTGRES_PW = get_env_variable("POSTGRES_PW")
-POSTGRES_DB = get_env_variable("POSTGRES_DB")
+database_config = open("database_config.txt", "r")
+POSTGRES_URL = database_config.readline().replace("\n","")
+POSTGRES_USER = database_config.readline().replace("\n","")
+POSTGRES_PW = database_config.readline().replace("\n","")
+POSTGRES_DB = database_config.readline().replace("\n","")
+database_config.close()
