@@ -46,7 +46,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 25px;
+  margin-bottom: 15px;
 }
 
 .container-search button{
@@ -69,6 +70,31 @@ body {
 
 .container-search button:hover {
   background: #1e0072 ;
+  box-shadow: 2px 2px 10px rgba(109, 1, 252, 0.6);
+}
+
+.container-search .button-enviar{
+  width: 180px;
+  height: 50px;
+
+  color: #fff;
+  cursor: pointer;
+
+  margin-left: 5px;
+
+  border-radius: 15px;
+  border:0;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  background: #08e900 ;
+
+  font-size: 25px;
+  font-family: Candara, sans-serif;
+
+  transition: background .5s;
+}
+
+.container-search .button-enviar:hover {
+  background: #00b12c ;
   box-shadow: 2px 2px 10px rgba(109, 1, 252, 0.6);
 }
 
@@ -102,7 +128,7 @@ body {
   border-radius: 15px;
 
   margin-right: 25px;
-  max-width: 15%;
+  max-width: 20%;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -122,4 +148,36 @@ body {
   box-shadow: 2px 2px 10px rgba(109, 1, 252, 0.6);
 }
 
+.content-select {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation-name: container-select-animation;
+  animation-duration: 2s;
+}
+.content-select select{
+  margin-right: 15px;
+  margin-top: 50px;
+  width: 180px;
+  height: 50px;
+  font-size: 23px;
+  font-family: Candara, sans-serif;
+  font-weight: bold;
+  color: #363C4C;
+  border-radius: 15px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  border:0;
 
+ -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #fff;
+  background-position-x: 260px;
+  text-align-last: center;
+
+  transition: box-shadow .6s;
+}
+
+.content-select select:focus {
+  box-shadow: 2px 2px 10px rgba(109, 1, 252, 0.5);
+}
