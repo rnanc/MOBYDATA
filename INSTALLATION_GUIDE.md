@@ -1,6 +1,6 @@
 Requisitos:
 
-- Postgre
+- PostgreSQL
 - PgAdmin 4
 - Conda
 - Virtualenv
