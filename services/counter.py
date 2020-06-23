@@ -4,6 +4,9 @@ from time import sleep
 
 
 def Rodar(cam):
+
+    cap = cv2.VideoCapture(cam)
+
     largura_min = 65  # Largura minima do retangulo
     altura_min = 200  # Altura minima do retangulo
 
@@ -23,7 +26,7 @@ def Rodar(cam):
         cy = y + y1
         return cx, cy
 
-    cap = cv2.VideoCapture(cam)
+
     #fshape = frame.shape
     #fheight = fshape[0]
     #fwidth = fshape[1]

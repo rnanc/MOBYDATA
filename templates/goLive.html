@@ -27,7 +27,7 @@
       <li><a href="/create_user">Cadastrar</a></li>
       <li onclick="collapseConfig()"><i class="material-icons-round">settings</i>Ferramentas</li>
       <li id="camera">GoLive</li>
-      <li id="relatorioDeVideo">Relatório de Vídeo</li>
+      <li id="relatorioDeVideo"><a href="/video_report">Relatório de Vídeo</a></li>
     </ul>
   </div>
 
@@ -38,26 +38,27 @@
   <div class="container-img">
     <!-- <img src={{report_image}} alt={{report_date}}> -->
     {% if "0" in renderizar %}
-      <div class="container-camera"><img src="{{ url_for('services.video_feed') }}" /></div>
+      <div class="container-camera"><img src="{{ url_for('services.video_feed', video=0) }}" /></div>
     {% endif %}
     {% if "1" in renderizar %}
-      <div class="container-camera"><img src="{{ url_for('services.heat_map') }}" /></div>
+      <div class="container-camera"><img src="{{ url_for('services.heat_map', video=0) }}" /></div>
     {% endif %}
     {% if "2" in renderizar %}
-      <div class="container-camera"><img src="{{ url_for('services.motion_heatmap') }}" /></div>
+      <div class="container-camera"><img src="{{ url_for('services.motion_heatmap', video=0) }}" /></div>
     {% endif %}
   </div>
 
     <form action="golive" method="post" enctype="multipart/form-data">
       <div class="container-search">
         <div class="content-select">
-          <select name="" id="">
+          <select name="cam" id="">
             <option disabled selected value="">escolha...</option>
             <option value="0">Contador</option>
             <option value="1">Mapa de Calor</option>
             <option value="2">Rastro de Calor</option>
           </select>
-        <button>Abrir Câmera</button>
+          <button>Abrir Câmera</button>
+        </div>
       </div>
     </form>
 

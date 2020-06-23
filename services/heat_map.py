@@ -6,10 +6,11 @@ import datetime
 
 def Rodar(cam):
 
+    cap = cv2.VideoCapture(cam)
     start = 1
     duration = 10
     fps = '30'
-    cap = cv2.VideoCapture(cam)
+
     outfile = 'heatmap.mp4'
 
     while True:
@@ -35,7 +36,7 @@ def Rodar(cam):
     kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (13, 13))
     cnt = 0
     sec = 0
-    fotoRelatorio = cap.read();
+    #fotoRelatorio = cap.read();
     while True:
         # if sec == duration: break
         cnt += 1
@@ -57,10 +58,10 @@ def Rodar(cam):
         res_show = res_show.astype(np.uint8)
         res_show = cv2.applyColorMap(res_show, cv2.COLORMAP_JET)
         #cv2.imshow('s', res_show)
-        relatorio = datetime.datetime.now();
+        '''relatorio = datetime.datetime.now();
         if relatorio.hour == 19:
           cv2.imwrite("relatorio.jpg", res_show)
-          break;
+          break;'''
         ret, jpeg = cv2.imencode('.jpg', res_show)
         send_frame = jpeg.tobytes()
         yield (b'--frame\r\n'
