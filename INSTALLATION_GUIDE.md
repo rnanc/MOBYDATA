@@ -47,11 +47,11 @@ obs: substitua o campo (nome da env) pelo nome que deseja dar para sua virtualen
 Inicie sua virtualenv usando o comando abaixo de acordo com seu sistema operacional:
 
 No Windows:
->  activate snowflakes
+>  activate (nome da env)
 
 Em macOS e Linux:
 
->  source activate snowflakes
+>  source activate (nome da env)
 
 
 # CRIANDO BANCO DE DADOS
