@@ -34,15 +34,25 @@ Após a instalação do postgre, instale o Conda (Anaconda).
 
 guia de instalação do conda: https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html
 
-como criar virtualenv no conda: https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html
+após instalar o conda, siga os seguintes passos:
 
-Após instalar o conda, no momento da criação da virtualenv dentro do projeto MOBYDATA utilize o comando:
+- abra seu terminal 
+- vá até a pasta do projeto do mobydata
+- dentro da pasta, utilize o comando abaixo:
+
+obs: substitua o campo (nome da env) pelo nome que deseja dar para sua virtualenv, como por exemplo: venv
  
->conda create --name (nome da env) --file requeriments.txt
+>conda create --name (nome da env) --file requirements.txt
 
-Para iniciar a virtualenv com os pacotes já instalados.
+Inicie sua virtualenv usando o comando abaixo de acordo com seu sistema operacional:
 
-Inicie sua virtualenv de acordo como mostra o tutorial no site do conda. 
+No Windows:
+>  activate snowflakes
+
+Em macOS e Linux:
+
+>  source activate snowflakes
+
 
 # CRIANDO BANCO DE DADOS
 
