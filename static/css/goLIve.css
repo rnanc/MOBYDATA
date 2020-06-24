@@ -73,6 +73,46 @@ body {
   box-shadow: 2px 2px 10px rgba(109, 1, 252, 0.6);
 }
 
+[type="file"] {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px;
+}
+
+[type="file"] + label {
+  background: #3d00e4;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  cursor: pointer;
+  /* display: inline-block; */
+    font-family: 'Candara', sans-serif;
+    font-size: inherit;
+    font-size: 25px;
+  /* font-weight: 600; */
+  /* margin-bottom: 1rem; */
+  outline: none;
+  padding:  10px 20px;
+  /* position: relative; */
+  vertical-align: middle;
+  transition: all .6s;
+}
+
+[type="file"]:focus + label,
+[type="file"] + label:hover {
+    background-color: #1e0072;
+    box-shadow: 2px 2px 10px rgba(109, 1, 252, 0.6);
+}
+
+[type="file"]:focus + label {
+  outline: 1px dotted #000;
+}
+
 .container-search .button-enviar{
   width: 180px;
   height: 50px;
@@ -149,15 +189,15 @@ body {
 }
 
 .content-select {
+  display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   animation-name: container-select-animation;
   animation-duration: 2s;
 }
 .content-select select{
   margin-right: 15px;
-  margin-top: 50px;
   width: 180px;
   height: 50px;
   font-size: 23px;
