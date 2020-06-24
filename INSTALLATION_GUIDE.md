@@ -42,7 +42,7 @@ após instalar o conda, siga os seguintes passos:
 
 obs: substitua o campo (nome da env) pelo nome que deseja dar para sua virtualenv, como por exemplo: venv
  
->conda create --name (nome da env) --file requeriments.txt
+>conda create --name (nome da env) --file requirements.txt
 
 Inicie sua virtualenv usando o comando abaixo de acordo com seu sistema operacional:
 
