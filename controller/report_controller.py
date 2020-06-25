@@ -1,7 +1,6 @@
 from flask import request, Blueprint, current_app, render_template
 from config.database.model import Report, Users
 from config.database.serealizer import ReportSchema, UserSchema
-import json
 from flask_jwt_extended import jwt_required
 report_blueprint = Blueprint('report', __name__, template_folder='templates')
 

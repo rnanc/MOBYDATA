@@ -7,6 +7,7 @@ home_blueprint = Blueprint('home', __name__, template_folder='templates', static
 @jwt_optional
 def home():
     current_user = get_jwt_identity()
+    print(current_user)
     if current_user:
         return redirect(url_for("home.logado"))
     else:
@@ -15,5 +16,7 @@ def home():
 @home_blueprint.route('/logado', methods=["GET"])
 @jwt_required
 def logado():
+    current_user = get_jwt_identity()
+    print(current_user)
     username = request.cookies.get('username')
     return render_template("dashboard.html", username=username)

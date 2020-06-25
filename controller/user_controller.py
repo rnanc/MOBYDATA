@@ -6,7 +6,7 @@ from flask_jwt_extended import create_access_token, create_refresh_token, jwt_re
 user_blueprint = Blueprint('user', __name__, template_folder='templates')
 
 @user_blueprint.route('/create_user', methods=["GET","POST"])
-#@jwt_required
+@jwt_required
 def register_user():
     if request.method == "POST":
         us = UserSchema()
@@ -22,14 +22,14 @@ def register_user():
         return render_template("cadastro.html", username=username)
 
 @user_blueprint.route('/read_user', methods=["GET"])
-#@jwt_required
+@jwt_required
 def read_user():
     us = UserSchema(many=True)
     result = Users.query.all()
     return us.jsonify(result), 200
 
 @user_blueprint.route('/update_user/<identifier>', methods=["POST", "GET"])
-#@jwt_required
+@jwt_required
 def update_user(identifier):
     if request.method == "POST":
         us = UserSchema()
@@ -65,7 +65,7 @@ def delete_user(identifier):
     return us.jsonify(result), 200
 
 @user_blueprint.route('/findone_user/<identifier>', methods=["GET"])
-#@jwt_required
+@jwt_required
 def findone_user(identifier):
     us = UserSchema(many=True)
     user = Users.query.filter(Users.username == identifier)
