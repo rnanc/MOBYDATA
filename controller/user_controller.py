@@ -82,5 +82,6 @@ def login_user():
         response = make_response(redirect(url_for("home.logado")))
         response.set_cookie('access_token_cookie', acess_token)
         response.set_cookie('username', user_query.username)
+        response.set_cookie('user_id', str(user_query.id))
         return response
     return redirect(url_for("home.home"))

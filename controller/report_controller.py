@@ -10,8 +10,7 @@ def create_report():
     bs = ReportSchema()
     current_app.db.session.commit()
     report = request.json
-    user_query = Users.query.filter(Users.username == report["owner"]).first()
-    report.pop("owner", None)
+    user_query = Users.query.filter(Users.id == int(request.cookies.get('user_id'))).first()
     report = bs.load(report)
     current_app.db.session.add(report)
     user_query.reports.append(report)
