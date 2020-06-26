@@ -1,7 +1,7 @@
 # MOBYDATA
 ![git-icon](https://img.icons8.com/clouds/100/000000/crowd.png)![git-icon](https://img.icons8.com/clouds/100/000000/heat-map.png)![git-icon](https://img.icons8.com/clouds/100/000000/treasure-map.png)
 
-MOBYDATA é um software para gerar dados a partir do mapeamento do comportamento do público no ambiente em que se encontra através de análises de mapas de calor e reconhecimento de pessoas.
+MOBYDATA é um sistema de monitoramento por vídeo, que utiliza as próprias câmeras do ambiente e oferece funcionalidades como mapas de calor, rastreamento e contadores personalizados que auxiliam no controle de fluxo de pessoas e aglomeração.
 
 ## Sumário
 
@@ -16,20 +16,19 @@ Para acessar o arquivo contendo o guia de instalação do projeto, clique ![aqui
 
 ## Mapa de Calor 
 
-Neste relatório está sendo utilizado Python e a biblioteca OpenCV para capturar os movimentos existentes no vídeo e assim mapear os pixels que foram 
-mais ativados.
+Neste relatório está sendo utilizado Python e a biblioteca OpenCV para capturar mudanças nos tons de cinza do vídeo e transformar em cores no estilo "mapa de calor" para melhor visualização.
 
 ![heatmap](files/gif/heat-map.gif)
 
 ## Rastro de Calor 
 
-Neste relatório está sendo utilizado Python e a biblioteca OpenCV para capturar os movimentos existentes no vídeo e assim mapear os pixels que foram ativados previamente, assim deixando um rastro do movimento feito.
+Neste relatório está sendo utilizado Python e a biblioteca OpenCV para capturar mudanças nos tons de cinza do vídeo e assim mapear os pixels que foram ativados previamente, assim deixando um rastro do movimento feito.
 
 ![heattrace](files/gif/heat-trace.gif)
 
 ## Contador de Pessoas 
 
-Neste relatório está sendo utilizado Python e a biblioteca OpenCV para capturar os movimentos existentes no vídeo e assim através de lógica contar o fluxo de pessoas de uma determinada área.
+Neste relatório está sendo utilizado Python, biblioteca OpenCV e um dataset treinado para identificar pessoas no vídeo e contar o fluxo de pessoas de uma determinada área.
 
 ![counter](files/gif/counter.gif)
 
