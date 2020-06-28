@@ -2,6 +2,7 @@ import numpy as np
 import cv2
 import copy
 from time import sleep
+import datetime
 # from progress.bar import Bar
 
 
@@ -40,6 +41,11 @@ def Rodar(cam):
             video_frame = cv2.addWeighted(frame, 0.7, color_image_video, 0.7, 0)
             color_image = cv2.applyColorMap(accum_image, cv2.COLORMAP_HOT)
             result_overlay = cv2.addWeighted(frame, 0.7, color_image, 0.7, 0)
+
+            relatorio = datetime.datetime.now();
+            data = "{:02d}-{:02d}-{:02d}".format(relatorio.day, relatorio.month, relatorio.replace(year=20).year)
+            if relatorio.hour == 22 and relatorio.minute == 29 and relatorio.second == 1:
+                cv2.imwrite("static/reports/report_" + data + ".jpg", result_overlay)
 
             #cv2.imshow("Video Original" , result_overlay)
             ret, jpeg = cv2.imencode('.jpg', result_overlay)

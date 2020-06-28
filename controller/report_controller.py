@@ -1,7 +1,6 @@
 from flask import request, Blueprint, current_app, render_template
 from config.database.model import Report, Users
 from config.database.serealizer import ReportSchema, UserSchema
-import json
 from flask_jwt_extended import jwt_required
 report_blueprint = Blueprint('report', __name__, template_folder='templates')
 
@@ -11,8 +10,7 @@ def create_report():
     bs = ReportSchema()
     current_app.db.session.commit()
     report = request.json
-    user_query = Users.query.filter(Users.username == report["owner"]).first()
-    report.pop("owner", None)
+    user_query = Users.query.filter(Users.id == int(request.cookies.get('user_id'))).first()
     report = bs.load(report)
     current_app.db.session.add(report)
     user_query.reports.append(report)

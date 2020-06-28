@@ -1,6 +1,6 @@
 from flask import request, Blueprint, render_template, url_for, redirect
 from flask_jwt_extended import jwt_required, get_jwt_identity, jwt_optional
-
+from config.database.model import Users
 home_blueprint = Blueprint('home', __name__, template_folder='templates', static_url_path="static")
 
 @home_blueprint.route('/', methods=["GET"])
@@ -15,5 +15,6 @@ def home():
 @home_blueprint.route('/logado', methods=["GET"])
 @jwt_required
 def logado():
+    current_user = get_jwt_identity()
     username = request.cookies.get('username')
     return render_template("dashboard.html", username=username)

@@ -30,7 +30,7 @@ def Rodar(cam):
                                               detectShadows=True)
 
 
-    # writer = FFmpegWriter(outfile, outputdict={'-r': fps})
+    #writer = FFmpegWriter(outfile, outputdict={'-r': fps})
     #writer = FFmpegWriter(outfile)
 
     kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (13, 13))
@@ -38,7 +38,7 @@ def Rodar(cam):
     sec = 0
     #fotoRelatorio = cap.read();
     while True:
-        # if sec == duration: break
+        #if sec == duration: break
         cnt += 1
         if cnt % int(fps) == 0:
             print(sec)
@@ -47,7 +47,7 @@ def Rodar(cam):
         if not ret: break
         fgmask = fgbg.apply(frame, None, 0.01)
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        # if cnt == 30: res
+        #if cnt == 30: res
         gray = cv2.GaussianBlur(gray, (11, 11), 2, 2)
         gray = gray.astype(np.float64)
         fgmask = cv2.morphologyEx(fgmask, cv2.MORPH_CLOSE, kernel)
@@ -58,10 +58,10 @@ def Rodar(cam):
         res_show = res_show.astype(np.uint8)
         res_show = cv2.applyColorMap(res_show, cv2.COLORMAP_JET)
         #cv2.imshow('s', res_show)
-        '''relatorio = datetime.datetime.now();
-        if relatorio.hour == 19:
-          cv2.imwrite("relatorio.jpg", res_show)
-          break;'''
+        relatorio = datetime.datetime.now();
+        data = "{:02d}-{:02d}-{:02d}".format(relatorio.day, relatorio.month, relatorio.replace(year=20).year)
+        if relatorio.hour == 22 and relatorio.minute == 29 and relatorio.second == 1:
+          cv2.imwrite("static/reports/report_"+data+".jpg", res_show)
         ret, jpeg = cv2.imencode('.jpg', res_show)
         send_frame = jpeg.tobytes()
         yield (b'--frame\r\n'

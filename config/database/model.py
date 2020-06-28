@@ -14,7 +14,7 @@ class Users(db.Model):
     company_name = db.Column(db.String(200), nullable=False)
     cam_ref = db.Column(db.String(200), nullable=True)
     provider = db.Column(db.String(200), nullable=False)
-    reports = db.relationship("Report", backref='owner', lazy="select")
+    reports = db.relationship("Report", backref='users', lazy="select")
     def gen_hash(self):
         self.password = pbkdf2_sha512.hash(self.password)
 

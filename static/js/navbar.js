@@ -4,5 +4,5 @@ function collapseNav() {
 
 function logoutSession(){
   document.cookie = "access_token_cookie=";
-  window.location.reload(true);
+  window.location.href = "/";
 }
