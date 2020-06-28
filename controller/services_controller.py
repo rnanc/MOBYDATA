@@ -11,7 +11,8 @@ services_blueprint = Blueprint('services', __name__, template_folder='templates'
 def video_feed():
     video = request.args.get('video')
     video = video if video.isdigit() == False else int(video)
-    return Response(services.counter.Rodar(video),
+    #Config personalizada na horizontal: largura=50, altura=50, posicao_letra_x=100, posicao_letra_y=50, cor_letra=(0,0,255), sentido_detectar="v", ponto_x_init=5, ponto_x_final=600, ponto_y_init=200, ponto_y_final=200
+    return Response(services.counter.Rodar(cam=video),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @services_blueprint.route('/heat_map')
@@ -19,7 +20,7 @@ def video_feed():
 def heat_map():
     video = request.args.get('video')
     video = video if video.isdigit() == False else int(video)
-    return Response(services.heat_map.Rodar(video),
+    return Response(services.heat_map.Rodar(cam=video),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @services_blueprint.route('/motion_heatmap')
@@ -27,7 +28,7 @@ def heat_map():
 def motion_heatmap():
     video = request.args.get('video')
     video = video if video.isdigit() == False else int(video)
-    return Response(services.motion_heatmap.Rodar(video),
+    return Response(services.motion_heatmap.Rodar(cam=video),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @services_blueprint.route('/golive', methods=["GET", "POST"])
