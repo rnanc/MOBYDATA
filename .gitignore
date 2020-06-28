@@ -1,7 +1,7 @@
-/.idea/
-.idea
+
 .vscode
 __pycache__
 venv
 /migrations/
+
 /.idea/
