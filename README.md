@@ -12,7 +12,7 @@ MOBYDATA é um sistema de monitoramento por vídeo, que utiliza as próprias câ
   - [Equipe](#equipe)
 
 ## Guia de Instalação
-Para acessar o arquivo contendo o guia de instalação do projeto, clique ![aqui](https://github.com/rnanc/MOBYDATA/blob/master/INSTALLATION_GUIDE.md)
+Para acessar o arquivo contendo o guia de instalação do projeto, clique [aqui](https://github.com/rnanc/MOBYDATA/blob/master/INSTALLATION_GUIDE.md)
 
 ## Mapa de Calor 
 
