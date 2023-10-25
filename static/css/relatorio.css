@@ -1,0 +1,63 @@
+body {
+  background: #EEEFF3;
+}
+.container-title {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-title h2 {
+  margin-top: 50px;
+  font-family: Candara, sans-serif;
+  font-size: 70px;
+  color: #363C4C;
+}
+
+.container-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+img{
+  width: 650px;
+  height: 325px;
+}
+
+.container-img img{
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+button {
+  position: absolute;
+  right:80px;
+  bottom: 30px;
+  width: 180px;
+  height: 60px;
+
+  cursor: pointer;
+
+  border-radius: 15px;
+  border:0;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  background: rgb(208, 255, 0);
+
+  font-size: 30px;
+  font-family: Candara, sans-serif;
+
+  transition: background .5s;
+}
+
+button:hover {
+  background: rgb(179, 219, 0);
+}
+
+.error-msg{
+ color: rgb(255, 0, 0);
+ font-family: Candara, sans-serif;
+ font-size: 45px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOBYDATA - SignIn</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/global.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/signIn.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
+</head>
+<body>
+  <nav>
+    <a href="/quem_somos">Quem somos</a>
+    <a href="/fale_conosco">Fale conosco</a>
+  </nav>
+  <div class="container">
+    <div class="brand">
+      <h1>Mobydata</h1>
+      <h3>MOBYDATA é um software para gerar dados a partir do mapeamento do
+        comportamento do público no ambiente em que se encontra através de análises
+        de mapas de calor e reconhecimento de pessoas</h3>
+      </div>
+
+      <div class="card-login">
+        <div class="card-login-header">
+          <h3>Login</h3>
+        </div>
+        <div class="card-login-content">
+          <form class="signin-form" action="/login_user" method="post" enctype="multipart/form-data">
+            <input placeholder="Email" type ="email" name="email">
+            <input placeholder="Senha" type="password" name="password">
+            <button>Entrar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

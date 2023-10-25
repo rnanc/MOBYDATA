@@ -1,0 +1,6 @@
+database_config = open("database_config.txt", "r")
+POSTGRES_URL = database_config.readline().replace("\n","")
+POSTGRES_USER = database_config.readline().replace("\n","")
+POSTGRES_PW = database_config.readline().replace("\n","")
+POSTGRES_DB = database_config.readline().replace("\n","")
+database_config.close()

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOBYDATA - Cadastro</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/global.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/cadastro.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div id="nav-icon" class="material-icons-round" onclick="collapseNav()">menu</div>
+
+      
+      <div class="user-name"><div class="user-circle"><i style="font-size: 35px;" class="material-icons-round">person</i></div><span>{{username}}</span></div>
+
+    <div id="logout-icon" class="material-icons-round" onclick="logoutSession()">keyboard_tab</div>
+  </nav>
+
+  <div id="sideBar">
+    <ul>
+      <li><a href="/logado">Início</a></li>
+      <li><a href="/create_user">Cadastrar</a></li>
+      <li onclick="collapseConfig()"><i class="material-icons-round">settings</i>Ferramentas</li>
+      <li id="camera"><a href="/golive">GoLive</a></li>
+      <li id="relatorioDeVideo"><a href="/video_report">Relatório de Vídeo</a></li>
+    </ul>
+  </div>
+
+  <div class="container-title">
+    <h2>Cadastrar</h2>
+  </div>
+
+  <div class="container-form">
+    <form class="form-content" action="create_user" method="post" enctype="multipart/form-data">
+      <input placeholder="Nome de usuário" name="username" autofocus type="text" required>
+      <input placeholder="Nome da Empresa" name="company_name" autofocus type="text" required>
+      <input placeholder="Email" name="email" type="email" required>
+      <input placeholder="Senha" name="password" type="password" required>
+      <div class="checkbox-form">
+        <input type="checkbox" name="provider">
+        <label class="checkbox">É Administrador ?</label>
+      </div>
+      <button>Cadastrar</button>
+    </form>
+  </div>
+  
+</body>
+<script src="../static/js/navbar.js"></script>
+<script src="../static/js/sidebar.js"></script>
+</html>

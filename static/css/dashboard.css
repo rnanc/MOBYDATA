@@ -1,0 +1,157 @@
+body {
+  background: #EEEFF3;
+}
+.container-title {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-title h2 {
+  margin-top: 50px;
+  font-family: Candara, sans-serif;
+  font-size: 70px;
+  color: #363C4C;;
+}
+
+@keyframes container-select-animation {
+  from {
+    transform: translateX(-250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.container-content h3 {
+  margin-top: 50px;
+  font-family: Candara, sans-serif;
+  font-size: 40px;
+  color: #363C4C;
+}
+.content-select {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation-name: container-select-animation;
+  animation-duration: 2s;
+}
+.container-content select{
+  margin-top: 50px;
+  width: 300px;
+  height: 100px;
+  font-size: 30px;
+  font-family: Candara, sans-serif;
+  font-weight: bold;
+  color: #363C4C;
+  border-radius: 15px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  border:0;
+
+ -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #fff;
+  background-position-x: 260px;
+  text-align-last: center;
+
+  transition: box-shadow .6s;
+}
+
+.container-content select:focus {
+  box-shadow: 2px 2px 10px rgba(109, 1, 252, 0.5);
+}
+
+@keyframes container-date-animation {
+  from {
+    transform: translateX(250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.content-date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  animation-name: container-date-animation;
+  animation-duration: 2s;
+}
+
+.content-date i{
+  color: #363C4C;
+  font-size: 40px;
+}
+
+.container-content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 100px;
+}
+
+.input-date {
+  margin-top: 150px;
+  width: 300px;
+  height: 100px;
+  font-size: 30px;
+  font-family: Candara, sans-serif;
+  font-weight: bold;
+  color: #363C4C;
+  border-radius: 15px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  border:0;
+
+  text-align: center;
+
+  transition: box-shadow .6s;
+}
+
+.input-date:focus {
+  box-shadow: 2px 2px 10px rgba(109, 1, 252, 0.6);
+}
+
+a{
+text-decoration: none;
+}
+
+button {
+  position: absolute;
+  margin-left: 40%;
+  margin-right: 60%;
+  left: 0;
+  right: 0;
+  bottom: 25px;
+  text-align: center;
+
+  width: 15%;
+  height: 5%;
+
+  border-radius: 15px;
+  border:0;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+
+  background: #3d00e4 ;
+  cursor: pointer;
+  color: #fff;
+  font-family: Candara, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  transition: all .6s;
+}
+
+button:hover {
+  background: #1e0072 ;
+  box-shadow: 2px 2px 10px rgba(109, 1, 252, 0.6);
+  bottom:35px;
+}
+
